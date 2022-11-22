@@ -19,7 +19,9 @@
       die("Connection failed: " . $conn->connect_error);
    }
 
-   $sql = "INSERT INTO users (id_code,date_time) VALUES ('$id_code','$date_time')";
+   // $sql = "INSERT INTO register (id_code,date_time) VALUES ('$id_code','$date_time')";
+   $sql = "INSERT INTO registers (id_code,date_time) VALUES ('$id_code','$date_time')";
+
 //    $result = $conn->query("SELECT id FROM tbl_test WHERE code = '$code'");
 //    if($result->num_rows == 0) {
 //       $sql = "INSERT INTO tbl_test (code,date_time) VALUES ('$code','$date_time')";
@@ -28,14 +30,17 @@
 //    }
    
    if ($conn->query($sql) === TRUE) {
-      echo "New record created successfully users -- ";
+      echo "New record created successfully register! ";
       echo $date_time;
    } else {
       echo "Error: " . $sql . " => " . $conn->error;
    }
 
+   sleep(10);
+   $delete = "DELETE FROM registers WHERE id = 0";
+   $conn->query($delete);
+
    $conn->close();
 //} else {
 //   echo "temperature is not set";
 //}
-?>
