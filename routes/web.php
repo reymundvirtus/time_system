@@ -35,4 +35,5 @@ Route::post('/insert-user', [UsersController::class, 'create_user']); //? create
 Route::post('/update-user', [UsersController::class, 'update_user']); //? update user
 Route::post('/update-description', [ProfileController::class, 'update_description']); //? update description
 Route::get('/search-user', [UsersController::class, 'search_user']); //? search user
+Route::get('/search-user-date', [UsersTimeController::class, 'search_user_date']); //? search user by date
 Route::post('/delete-user', [UsersController::class, 'delete_user']); //? delete user

@@ -140,7 +140,10 @@
                     <div class="card mb-4">
                         <div class="card-header pb-0">
                             <h6>Employees Time &nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" type="button" 
-                                class="text-secondary font-weight-bold text-xs btn btn-primary text-white" id="sync">Sync</a></h6>
+                                class="text-secondary font-weight-bold text-xs btn btn-primary text-white" id="sync">Sync</a>
+                                <label for="datepicker">Select Date</label>
+                                <input type="text" style="width:120px;" name="date" id="date" class="created_on required date" placeholder="YYYY-MM-DD" required="">
+                            </h6>
                         </div>
                         <div class="card-body px-0 pt-0 pb-2">
                             <div class="table-responsive p-0">
@@ -180,5 +183,7 @@
     </main>
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/eggplant/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="{{ asset('js/ajax_emp_auth.js') }}"></script>
 @endsection
